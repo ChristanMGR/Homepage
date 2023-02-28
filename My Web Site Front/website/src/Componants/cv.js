@@ -47,7 +47,7 @@ observer.observe(firstRef.current)
 
             <div className={`education-info ${elelmentIsVisable ? 'shown' : 'hidden'}`}>
             
-              <h1> Education History</h1>
+              <h1> Educational History</h1>
 
               <br></br>
               <br></br>
