@@ -9,8 +9,8 @@ const Navbar = () => {
    
    <div></div>
    <Link to={"/Home"} className='links' style={{color: 'white'}}> Home</Link>
-   <Link to={"/projects/eng"} className='links' style={{color: 'white'}}> Projects</Link>
-   <Link to={"/blog"} className='links' style={{color: 'white'}}> Blog</Link> 
+   <Link to={"/Projects"} className='links' style={{color: 'white'}}> Projects</Link>
+   <Link to={"/Blog"} className='links' style={{color: 'white'}}> Blog</Link> 
    
  
    

@@ -14,15 +14,15 @@ const Footer = () => {
             <div className='links'>
 
                 <div className='Projects'>
-                <Link to={"/home" } style={{color: 'white'}}>Home</Link>
+                <Link to={"/Home" } style={{color: 'white'}}>Home</Link>
                 </div>
 
                 <div className='Projects'>
-                <Link to={"/projects/eng" } style={{color: 'white'}}>Projects</Link>
+                <Link to={"/Projects" } style={{color: 'white'}}>Projects</Link>
                 </div>
 
                 <div className='Blog'>
-                <Link to={"/blog" } style={{color: 'white'}}>Blog</Link>
+                <Link to={"/Blog" } style={{color: 'white'}}>Blog</Link>
                 </div>
 
                 

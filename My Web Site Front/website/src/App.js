@@ -26,17 +26,12 @@ function App() {
       <Routes>
        
         <Route path="/" element={ <Landingpage/> } />
-        <Route path="/Home" element={ <Home/> } />
-        <Route path="/projects/eng" element={ <Projects/> } />
-        
+        <Route path="/home" element={ <Home/> } />
+        <Route path="/projects" element={ <Projects/> } />
         <Route path="/blog" element={ <BlogList/> } />
-        
-        
         <Route path="/mypost" element={ <PostBlogList/> } />
         <Route path="/blog/:id/" element={ <SingleBlogShow/> } />
-        <Route path="/blog/postedit/:id/" element={ <SingleBlogEdit/> } />
 
-        <Route path="/yothisistheplacewhereilogin" element={ <MyLogIn/> } />
 
       </Routes>
       <Footer/>

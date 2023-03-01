@@ -26,6 +26,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include("SiteREST.urls")),
     path("", TemplateView.as_view(template_name= "index.html")),
+    path("Home/", TemplateView.as_view(template_name= "index.html")),
+    path("Projects/", TemplateView.as_view(template_name= "index.html")),
+    path("Blog/", TemplateView.as_view(template_name= "index.html")),
+    path("Blog/<int:pk>", TemplateView.as_view(template_name= "index.html")),
+    
 ]
 
 #setting the media urlspatterns
