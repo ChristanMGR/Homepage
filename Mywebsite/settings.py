@@ -98,8 +98,13 @@ WSGI_APPLICATION = 'Mywebsite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': "HomepageDataBase",
+        "USER": "postgres",
+        "PASSWORD": "Jiggs2020",
+        "HOST": "database-1.czlxdfxxwbol.ap-northeast-1.rds.amazonaws.com",
+        "POST": "5432"
+
     }
 }
 
