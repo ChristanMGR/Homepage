@@ -36,8 +36,8 @@ observer.observe(firstRef.current)
             <h1> Basic info</h1>
 
             <section>
-                <h3>Name</h3> Christian Milsoe Granberg Rasmussen
-                <h3>Born</h3> 10th December, 1989
+                <h3>名前</h3> Christian Milsoe Granberg Rasmussen
+                <h3>誕生日</h3> １２月１０日平成元年
                 <br></br>
                 
                 
@@ -47,7 +47,7 @@ observer.observe(firstRef.current)
 
             <div className={`education-info ${elelmentIsVisable ? 'shown' : 'hidden'}`}>
             
-              <h1> Educational History</h1>
+              <h1> 教育</h1>
 
               <br></br>
               <br></br>
@@ -56,19 +56,19 @@ observer.observe(firstRef.current)
               <br></br>
 
               <div ref={firstRef} className='edu-writing'>
-                <h3>Highschool:</h3> Nyborg Gymnaium, Denmark (2006-2009) Major in Maths an physics
+                <h3>高校:</h3> ニュボーグ高校, デンマーク (2006-2009)
               </div>
 
               <br></br>
 
               <div className='edu-writing'>
-                <h3>University: </h3> <div >Aarhus University, Denmark (2010-2016) Major in Japanese studies and Minor in Business</div>
+                <h3>大学: </h3> <div >オーフス大学, デンマーク (2010-2016) 専攻：日本学　　副専攻： ビジネス経済</div>
               </div>
 
               <br></br>
 
               <div className='edu-writing'>
-                <h3>Mext Scholarship:</h3> Nagasaki University, Denmark (2015-2016) A one year scholarship where I studied Japanse and Business
+                <h3>奨学金:</h3> 長崎大学, (2015-2016) 科目： 日本語と国際ビジネス
               </div>
 
           
@@ -77,31 +77,32 @@ observer.observe(firstRef.current)
 
               
             <div className= "work-info">
-            <h1> Work info</h1>
+            <h1> 職務経験</h1>
             <section>
-                <h3>2016-2018</h3> Kindergarten Teacher at "Valhalla Kindergarten", Denmark
-                <h3>2018-2023</h3> Assistant Language Teacher at "Sapporo Eastern Business Highschool"
+                <h3>2018-2023</h3> ジェットプログラムのALT：北海道札幌東商業高校
+                <h3>2016-2018</h3> 保育園先生：ヴァルハラ保育園　
             </section>
             </div>
 
 
             <div className="other-experience">
-            <h1>Other Experience</h1>
+            <h1>ボランティア活動</h1>
             <section>
-                <h3>2007-2015</h3> Volunteer Karate Instructor at Nyborg Karate Club
-                <h3>2013-2014</h3> Volunteer at Sapporo kyoudou fukushikai
+                <h3>2005-2018</h3> ニュボーグ空手部、デンマーク
+                <h3>2013-2014</h3> 札幌協働福祉会、あいの里、北海道
+
             </section>
 
 
             </div>
             
             <div className={`skills-info ${elelmentIsVisable ? 'shown' : 'hidden'}`}>
-              <h1> Skills </h1>
+              <h1> その他 </h1>
               <section>
 
-              <h3>- Knowledge of Japan and the international environment.  </h3>
-              <h3>- Ability to work with and understand different types of people. </h3> 
-              <h3>- Problem solving and reflection.</h3> 
+              <h3>- 日本社会と国際環境の知識 </h3>
+              <h3>- 様々な人と働き、把握する能力 </h3> 
+              <h3>- 問題解決能力と反省能力</h3> 
 
               </section>
             </div>
@@ -109,14 +110,14 @@ observer.observe(firstRef.current)
 
             <div ref={secondRef} className='something-else'>
               
-            <h1> Languages</h1>
+            <h1> 言語</h1>
             <section>
-                <h3>English</h3> 
-                <h3>Japanese</h3> 
-                <h3>Danish</h3> 
+                <h3>英語</h3> 
+                <h3>日本語</h3> 
+                <h3>デンマーク語</h3> 
             </section>
 
-            <h1> Programming</h1>
+            <h1> IT</h1>
             <section>
                 <h3>Python</h3> 
                 <h3>Django</h3> 

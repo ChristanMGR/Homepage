@@ -10,6 +10,9 @@ def upload_to(instance, filename):
 def upload_blog_to(instance, filename):
     return f"blogposts/{filename}" 
 
+def upload_bgimg_to(instance, filename):
+    return f"blogposts/{filename}" 
+
 # Create your models here.
 
 class BlogPost(models.Model):
@@ -73,3 +76,12 @@ class Feedback(models.Model):
         return self.title
     
 
+class BackgroundImages(models.Model):
+   
+    
+    imgtype = models.CharField(max_length=250, null=True, blank=True)
+    #the underscore is in case of translation, making to more easy
+    img = models.ImageField(_("Image"), upload_to=upload_bgimg_to, default="posts/My_img.jpg")
+    
+    def __str__(self):
+        return self.imgtype

@@ -22,11 +22,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-hp3-tq2j#d89+b*qsjok-a8(1ao-)^)r_x)6$p=b%u9!h1ganj'
+SECRET_KEY = AWS_ACCESS_KEY_ID = os.environ.get("HP_DJANGO_SECRET_KEY") #'django-insecure-hp3-tq2j#d89+b*qsjok-a8(1ao-)^)r_x)6$p=b%u9!h1ganj'
 
+
+print(os.environ
+      )
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
+DEBUG = (os.environ.get("Django_Debug_HP") == "True") #True
+print(os.environ.get("Django_Debug_HP")
+      )
 ALLOWED_HOSTS = []
 
 
@@ -99,11 +103,11 @@ WSGI_APPLICATION = 'Mywebsite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': "HomepageDataBase",
+        'NAME': "postgres",
         "USER": "postgres",
-        "PASSWORD": "Jiggs2020",
-        "HOST": "database-1.czlxdfxxwbol.ap-northeast-1.rds.amazonaws.com",
-        "POST": "5432"
+        "PASSWORD": os.environ.get("DB_PASSWORD"),
+        "HOST": os.environ.get("DB_HOST"),
+        "PORT": "5432"
 
     }
 }
@@ -146,6 +150,8 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "My Web Site Front/website/build/static"),]
+
+STATICFILES_ROOT = [os.path.join(BASE_DIR, "staticfiles"),]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

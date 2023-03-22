@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Project, BlogPost, Feedback
+from .models import Project, BlogPost, Feedback, BackgroundImages
 
 
 class PostSerializer(serializers.ModelSerializer):
@@ -21,3 +21,9 @@ class FeedbackSerializer(serializers.ModelSerializer):
     class Meta:
         model = Feedback
         fields = ["title", "text", "work_space", "author", "date", "id"]
+
+class ImageSerializer(serializers.ModelSerializer): 
+
+    class Meta:
+        model= BackgroundImages
+        fields = ["img", "imgtype", "id" ]

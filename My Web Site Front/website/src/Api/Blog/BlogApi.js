@@ -50,6 +50,16 @@ export const getProjList = async(pageParam = 1, options = {}) => {
 
 
 
+export const getImgs = async () => {
+    const respose = await Api.get(`images/`)
+    return respose.data
+}
+
+
+
+
+
+
 
 export default Api
 

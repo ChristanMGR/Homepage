@@ -1,8 +1,8 @@
 from django.shortcuts import render, get_object_or_404
-from .models import BlogPost, Project, Feedback
+from .models import BlogPost, Project, Feedback, BackgroundImages
 from rest_framework import generics
 from rest_framework.views import APIView
-from .serializers import PostSerializer, ProjectSerializer, FeedbackSerializer
+from .serializers import PostSerializer, ProjectSerializer, FeedbackSerializer, ImageSerializer
 from rest_framework.parsers import MultiPartParser, FormParser
 from rest_framework import status 
 from rest_framework.response import Response
@@ -134,5 +134,10 @@ class FeedbackSingleUpdate(generics.DestroyAPIView):
     permission_classes = [IsAdminUser]
 
 
+
+class ImgList(generics.ListAPIView): 
+    queryset = BackgroundImages.objects.all()
+    serializer_class = ImageSerializer
+    permission_classes = [DjangoModelPermissionsOrAnonReadOnly]
 
 

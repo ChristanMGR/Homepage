@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+/* import React, { useEffect, useState } from 'react'
 import { useParams} from 'react-router-dom'
 import {QueryClient, useMutation, useQuery, useQueryClient } from 'react-query'
 import { getSinglePost, updatePost, deletePost } from '../Api/Blog/BlogApi'
@@ -185,4 +185,4 @@ const editPostStatus = (
   )
 }
 
-export default SingleBlogEdit
+export default SingleBlogEdit */
