@@ -25,13 +25,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = AWS_ACCESS_KEY_ID = os.environ.get("HP_DJANGO_SECRET_KEY") #'django-insecure-hp3-tq2j#d89+b*qsjok-a8(1ao-)^)r_x)6$p=b%u9!h1ganj'
 
 
-print(os.environ
-      )
+# print((os.environ.get("Django_Debug_HP" == "True"))
+#       )
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = (os.environ.get("Django_Debug_HP") == "True") #True
-print(os.environ.get("Django_Debug_HP")
-      )
-ALLOWED_HOSTS = []
+DEBUG = False #os.environ.get("Django_Debug_HP")
+
+
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -235,7 +235,7 @@ AWS_STORAGE_BUCKET_NAME = os.environ.get("AWS_STORAGE_BUCKET_NAME")
 
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+DEFAULT_FILE_STORAGE = os.environ.get("AWS_DEFAULT_FILE_STORAGE")
 
 
 AWS_S3_REGION_NAME = 'ap-northeast-1'
