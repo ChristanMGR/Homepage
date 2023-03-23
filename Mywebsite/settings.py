@@ -63,7 +63,7 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     
-    "https://web-production-e35a.up.railway.app/",
+    "http://localhost:3000",
 ]
 
 
