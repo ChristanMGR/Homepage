@@ -28,7 +28,7 @@ SECRET_KEY = AWS_ACCESS_KEY_ID = os.environ.get("HP_DJANGO_SECRET_KEY") #'django
 # print((os.environ.get("Django_Debug_HP" == "True"))
 #       )
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True #os.environ.get("Django_Debug_HP")
+DEBUG = False #os.environ.get("Django_Debug_HP")
 
 
 ALLOWED_HOSTS = ["web-production-e35a.up.railway.app"]
