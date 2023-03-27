@@ -31,7 +31,7 @@ SECRET_KEY = AWS_ACCESS_KEY_ID = os.environ.get("HP_DJANGO_SECRET_KEY") #'django
 DEBUG = False #os.environ.get("Django_Debug_HP")
 
 
-ALLOWED_HOSTS = ["web-production-e35a.up.railway.app"]
+ALLOWED_HOSTS = ["web-production-e35a.up.railway.app", '127.0.0.1']
 
 
 # Application definition
@@ -59,6 +59,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
 CORS_ALLOWED_ORIGINS = [
@@ -81,7 +82,7 @@ ROOT_URLCONF = 'Mywebsite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, "My Web Site Front/website/build"), ],
+        'DIRS': [os.path.join(BASE_DIR, "build"), ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -149,9 +150,9 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "My Web Site Front/website/build/static"),]
-
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "build/static"),]
 STATICFILES_ROOT = [os.path.join(BASE_DIR, "staticfiles"),]
+STATICFILES_STORAGE = ["whitenoise.django.GzipManifestStaticFilesStorage"]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
