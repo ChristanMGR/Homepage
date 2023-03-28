@@ -33,7 +33,6 @@ DEBUG = False #os.environ.get("Django_Debug_HP")
 
 ALLOWED_HOSTS = ["web-production-e35a.up.railway.app", '127.0.0.1']
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -51,6 +50,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -59,7 +59,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
-    "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
 CORS_ALLOWED_ORIGINS = [
@@ -148,12 +147,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = 'static/'
-
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "build/static"),]
-STATICFILES_ROOT = [os.path.join(BASE_DIR, "staticfiles"),]
-STATICFILES_STORAGE = ["whitenoise.django.GzipManifestStaticFilesStorage"]
-
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "build\static"),]
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+#STATICFILES_STORAGE = ["whitenoise.django.GzipManifestStaticFilesStorage"]
+STORAGES = {
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
+print(STATICFILES_DIRS)
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
