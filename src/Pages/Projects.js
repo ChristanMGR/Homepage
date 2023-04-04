@@ -1,5 +1,4 @@
 
-import ProjectsList from './ProjectsList'
 import Project from '../Componants/Project'
 import ProjectEx from '../Componants/ProjectEx'
 import { ExcerptContext } from '../Contex/DetailsContext'
