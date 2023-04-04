@@ -6,7 +6,7 @@ import { ExcerptContext } from '../Contex/DetailsContext';
 // Notice that the forwardRef paranthesis clases all the way in the end for the component
 const Project = React.forwardRef(({project}, ref)  => {
 
-//const {excerpt, setExcerpt} = useContext(ExcerptContext)
+const {excerpt, setExcerpt} = useContext(ExcerptContext)
 
 function HandleMouseEnter (e){
     setExcerpt([project.pictures, project.title, project.explaination, project.link, project.link_2])
