@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+/* import React, { useState } from 'react'
 import SingleBlog from './SingleBlog'
 import {QueryClient, useMutation, useQuery, useQueryClient } from 'react-query'
 import { addPost, getPosts} from '../Api/Blog/BlogApi'
@@ -132,7 +132,7 @@ const newPostStatus = (
   <div className='new-post-image'>
     <input
       type="file"
-      accept='Image*/'
+      accept='Image'
       name='image'
       id = "image"
       onChange={handleChange}
@@ -195,4 +195,4 @@ else {
    </div>
   )}
 
-export default PostBlogList
+export default PostBlogList */
